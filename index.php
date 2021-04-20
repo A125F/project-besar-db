@@ -42,7 +42,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">POLINEMA</a></h1>
+      <h1 class="logo me-auto"><a href="index.php">POLINEMA</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -151,7 +151,7 @@
               internasional yang diadakan oleh Polinema. Tak perlu lagi menggali informasi melalui chat grup
               yang tenggelam.
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            <a href="#services" class="btn-learn-more">Learn More</a>
           </div>
         </div>
 
@@ -216,7 +216,7 @@
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="course.html">Course</a></h4>
+              <h4><a href="course.php">Course</a></h4>
               <p>Course yang diadakan oleh platform internasional seperti Edx, Coursera, dan lainnya.</p>
             </div>
           </div>
@@ -224,7 +224,7 @@
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Tukar Pelajar</a></h4>
+              <h4><a href="tukper.php">Tukar Pelajar</a></h4>
               <p>Pertukaran pelajar dengan instansi pendidikan luar negeri dengan durasi minimal satu semester</p>
             </div>
           </div>
@@ -232,7 +232,7 @@
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Seminar</a></h4>
+              <h4><a href="seminar.php">Seminar</a></h4>
               <p>Seminar yang diadakan oleh Polinema dengan pembicara dan audien berlingkup internasional</p>
             </div>
           </div>

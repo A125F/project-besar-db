@@ -42,17 +42,17 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">POLINEMA</a></h1>
+      <h1 class="logo me-auto"><a href="index.php">POLINEMA</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.html">Kembali</a></li>
-          <li><a class="nav-link scrollto" href="tukper.html">Tukar Pelajar</a></li>
-          <li><a class="nav-link scrollto" href="course.html">Course</a></li>
+          <li><a class="nav-link scrollto" href="index.php">Kembali</a></li>
+          <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
+          <li><a class="nav-link scrollto" href="seminar.php">Seminar</a></li>
           <li><a class="nav-link scrollto" href="#">Admin</a></li>
-          <li><a class="getstarted scrollto" href="#">Daftar</a></li>
+          <li><a class="getstarted scrollto" href="formcourse.php">Daftar</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -66,9 +66,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Seminar Internasional</h1>
-          <h2>Kegiatan ini bertujuan untuk emmbuka wawasan mahasiswa tentang kehidupan dan praktik kerja dari sisi pandang internasional</h2>
+          <h1>Course Internasional</h1>
+          <h2>Materi tambahan yang dapat diambil melalui platform pembelajaran internasional yang disediakan oleh lembaga/instansi pendidikan internasional</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="https://www.edx.org/" class="btn-get-started scrollto">Edx</a> &nbsp; &nbsp; &nbsp;
+            <a href="https://www.coursera.org/" class="btn-get-started scrollto">Coursera</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -121,77 +123,33 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Tentang Seminar</h2>
+          <h2>Tentang Course</h2>
         </div>
 
         <div class="row content">
           <div class="col-lg-6">
             <p>
-              Seminar ini diadakan oleh Polinema langusng dengan mengundang audien dan pembicara yang berasal dari instansi luar negeri. Keuntungan yang didapat :
+              Untuk mengikuti course internasional, mahasiswa diharuskan mengikuti langkah dan persyaratan dibawah ini :
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Memiliki pengalaman dan pandangan atas dunia internasional</li>
-              <li><i class="ri-check-double-line"></i> Mengetahui kebutuhan ilmu dan praktik dalam dunia internasional</li>
-              <li><i class="ri-check-double-line"></i> Mendapatkan sertifikat</li>
+              <li><i class="ri-check-double-line"></i> Memilih maksimal 1 course dari Edx atau Coursera, maupun platform lain</li>
+              <li><i class="ri-check-double-line"></i> Biaya course tidak melebihi 100$ atau Rp. 1.500.000, jika lebih maka biaya lebihan akan ditanggung mahasiswa</li>
+              <li><i class="ri-check-double-line"></i> Pastikan course yang dipilih sesuai mata kuliah yang diambil pada prodi terkait</li>
+              <li><i class="ri-check-double-line"></i> Mengisi form pendaftaran (klik tombol disamping)</li>
+              <li><i class="ri-check-double-line"></i> Informasi penerimaan pendaftaran akan dikirim melalui email</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Pendaftaran akan ditutup ketika kuota pada seminar sudah terpenuhi, jadi siapa cepat dai yang dapat. Scroll kebawah untuk melihat daftar seminar
+              Sistem penerimaan dari course ini bergantung besarnya biaya, kesulitam course, kesesuaian,
+              dan nilai kecakapan berbahasa inggris serta IPK dengan rasio 8:2. Klik tombol dibawah untuk mendaftar.
             </p>
+            <a href="formcourse.php" class="btn-learn-more">Daftar</a>
           </div>
         </div>
 
       </div>
     </section><!-- End About Us Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>List Seminar </h2>
-          <p>Seminar dibawah ini memiliki harga dan kuota yang berbeda sesuai banyaknya audien dan pembicara.</p>
-        </div>
-
-        <div class="row d-flex justify-content-center">
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Learn by Doing</a></h4>
-              <p>Seminar yang menjelaskan bahwa memulai lebih baik dari pada berhenti dengan pembicara Mr. X </p>
-              <br>
-              <p>200 Kursi</p>
-              <p>Rp. 110.000 / kursi</p>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Hard Skill or Soft Skill?</a></h4>
-              <p>Seminar yang menjelaskan perbedaan soft skill dan hard skill</p>
-              <br>
-              <p>250 Kursi</p>
-              <p>Rp. 100.000 / kursi</p>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Project Management</a></h4>
-              <p>Seminar yang diadakan oleh Polinema dengan pembicara dan audien berlingkup internasional</p>
-              <br>
-              <p>150 Kursi</p>
-              <p>Rp. 125.000 / kursi</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
 
   </main><!-- End #main -->
 

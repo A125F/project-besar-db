@@ -66,7 +66,7 @@
       <div class="row d-flex justify-content-center">
         <div style="text-align:center;" class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
           <h1>Selamat Datang Pendaftar!</h1>
-          <h2>Pastikan semua identitas dan keperluan untuk mendaftar course internasional sudah matang dan sesuai aturan</h2>
+          <h2>Pastikan semua identitas dan keperluan untuk mendaftar course internasional sudah benar dan sesuai aturan</h2>
         </div>
       </div>
     </div>
@@ -89,36 +89,72 @@
               Isi form berikut dengan baik dan benar :
             </p>
         </div>
-        <form method="post" action ="success.php">
+        <form method="post" action ="successc.php">
+            <br>
             <div class="container">
-                <label for="firstname">First Name</label>
-                <input required type="text" class="form-control" id="firstname" name="firstname">
+                <label for="nama">Nama</label>
+                <input required type="text" class="form-control" id="nama" name="nama">
             </div>
             <br>
             <div class="container">
-                <label for="lastname">Last Name</label>
-                <input type="text" class="form-control" id="lastname" name="lastname">
+                <label for="nim">NIM</label>
+                <input required type="number" require class="form-control" id="nim" name="nim">
             </div>
             <br>
             <div class="container">
-                <label for="dob">Date of Birth</label>
-                <input required type="text" class="form-control" id="dob" name="dob">
+                <label for="prodi">Program Studi</label>
+                <input required type="text" class="form-control" id="prodi" name="prodi">
+            </div>
+            <br>
+            <div class="container">
+                <label for="jurusan">Jurusan</label>
+                <input required type="text" class="form-control" id="jurusan" name="jurusan">
+            </div>
+            <br>
+            <div class="container">
+                <label for="ipk">IPK</label>
+                <input required type="text" class="form-control" id="ipk" name="ipk">
+            </div>
+            <br>
+            <div class="container">
+                <label for="semester">Semester</label>
+                <input required type="text" class="form-control" id="semester" name="semester">
             </div>
             <br>
             <div class="container">
                 <label for="email" class="form-label">Email address</label>
                 <input required type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" >
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <div id="emailHelp" class="form-text">Kami akan menjaga kerahasiaan email anda</div>
             </div>
             <br>
             <div class="container">
-                <label for="phone" class="form-label">Contact Number</label>
-                <input requiered type="text" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp" >
-                <div id="phoneHelp" class="form-text">We'll never share your number with anyone else.</div>
+                <label for="namac">Nama Course</label>
+                <input required type="text" class="form-control" id="namac" name="namac">
             </div>
             <br>
+            <div class="container">
+                <label for="linkc">Link Course</label>
+                <input required type="text" class="form-control" id="linkc" name="linkc">
+            </div>
+            <br>
+            <div class="container">
+                <label for="hargas">Biaya Course</label>
+                <input required type="text" class="form-control" id="hargas" name="hargas">
+            </div>
+            <br>
+            <div class="container">
+                <label for="durasic">Durasi Course</label>
+                <input required type="text" class="form-control" id="durasic" name="durasic">
+            </div>
+            <br>
+            <div class="container">
+                <label for="level">Level Course</label>
+                <input required type="text" class="form-control" id="level" name="level">
+            </div>
+            <br>
+            <br>
             <div class = "container">
-            <button type="submit" name="submit" class="btn btn-primary btn-md">Submit</button>
+            <button style="background-color:#37517e; border-color: #37517e;" type="submit" name="submit" class="btn btn-primary btn-md">Submit</button>
             </div>
         </form>
         <br>
