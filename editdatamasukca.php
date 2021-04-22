@@ -1,3 +1,8 @@
+<?php 
+    require_once 'db/conn.php';
+        $id = $_GET['id'];
+        $course = $crud->getCourseDetails($id);
+?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +10,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Course Internasional</title>
+  <title>Edit Pendaftar</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,7 +31,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/stylef.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Arsha - v4.1.0
@@ -48,11 +53,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.php">Kembali</a></li>
+          <li><a class="nav-link scrollto" href="course.php">Kembali</a></li>
           <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
           <li><a class="nav-link scrollto" href="seminar.php">Seminar</a></li>
-          <li><a class="nav-link scrollto" href="#">Admin</a></li>
-          <li><a class="getstarted scrollto" href="formcourse.php">Daftar</a></li>
+          <li><a class="getstarted scrollto" href="index.php">Home</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -64,17 +68,10 @@
   <section id="hero" class="d-flex align-items-center">
 
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Course Internasional</h1>
-          <h2>Materi tambahan yang dapat diambil melalui platform pembelajaran internasional yang disediakan oleh lembaga/instansi pendidikan internasional</h2>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="https://www.edx.org/" class="btn-get-started scrollto">Edx</a> &nbsp; &nbsp; &nbsp;
-            <a href="https://www.coursera.org/" class="btn-get-started scrollto">Coursera</a>
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+      <div class="row d-flex justify-content-center">
+        <div style="text-align:center;" class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Edit data</h1>
+          <h2>Pastikan data yang akan diedit sudah bendar dan sesuai agar tidak terjadi kesalahpahaman</h2>
         </div>
       </div>
     </div>
@@ -83,71 +80,86 @@
 
   <main id="main">
 
-    <!-- ======= Cliens Section ======= -->
-    <section id="cliens" class="cliens section-bg">
-      <div class="container">
-
-        <div class="row" data-aos="zoom-in">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Cliens Section -->
-
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Tentang Course</h2>
+          <h2>Form Edit Data</h2>
         </div>
 
-        <div class="row content">
+        <div class="row content d-flex justify-content-center">
           <div class="col-lg-6">
-            <p>
-              Untuk mengikuti course internasional, mahasiswa diharuskan mengikuti langkah dan persyaratan dibawah ini :
+            <p style="text-align: center;">
+              Edit Isi form berikut dengan baik dan benar :
             </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Memilih maksimal 1 course dari Edx atau Coursera, maupun platform lain</li>
-              <li><i class="ri-check-double-line"></i> Biaya course tidak melebihi 100$ atau Rp. 1.500.000, jika lebih maka biaya lebihan akan ditanggung mahasiswa</li>
-              <li><i class="ri-check-double-line"></i> Pastikan course yang dipilih sesuai mata kuliah yang diambil pada prodi terkait</li>
-              <li><i class="ri-check-double-line"></i> Mengisi form pendaftaran (klik tombol disamping)</li>
-              <li><i class="ri-check-double-line"></i> Informasi penerimaan pendaftaran akan dikirim melalui email</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Sistem penerimaan dari course ini bergantung besarnya biaya, kesulitam course, kesesuaian,
-              dan nilai kecakapan berbahasa inggris serta IPK dengan rasio 8:2. Klik tombol dibawah untuk mendaftar.
-            </p>
-            <a href="formcourse.php" class="btn-learn-more">Daftar</a>
-          </div>
         </div>
-
+        <form method="post" action ="editpdatamasukca.php">
+        <input type="hidden" name="id" value="<?php echo $course['id_courseint']?>" />
+            <br>
+            <div class="container">
+                <label for="nama">Nama</label>
+                <input required type="text" class="form-control" value="<?php echo $course['nama_mhs']?>" id="nama" name="nama">
+            </div>
+            <br>
+            <div class="container">
+                <label for="nim">NIM</label>
+                <input required type="number" require class="form-control" value="<?php echo $course['nim']?>" id="nim" name="nim">
+            </div>
+            <br>
+            <div class="container">
+                <label for="prodi">Program Studi</label>
+                <input required type="text" class="form-control" value="<?php echo $course['prodic']?>" id="prodi" name="prodi">
+            </div>
+            <br>
+            <div class="container">
+                <label for="jurusan">Jurusan</label>
+                <input required type="text" class="form-control" value="<?php echo $course['juruc']?>" id="jurusan" name="jurusan">
+            </div>
+            <br>
+            <div class="container">
+                <label for="ipk">IPK</label>
+                <input required type="text" class="form-control" value="<?php echo $course['ipkc']?>" id="ipk" name="ipk">
+            </div>
+            <br>
+            <div class="container">
+                <label for="email" class="form-label">Email address</label>
+                <input required type="email" class="form-control" value="<?php echo $course['emailc']?>" id="email" name="email" aria-describedby="emailHelp" >
+                <div id="emailHelp" class="form-text">Kami akan menjaga kerahasiaan email anda</div>
+            </div>
+            <br>
+            <div class="container">
+                <label for="namac">Nama Course</label>
+                <input required type="text" class="form-control" value="<?php echo $course['nama_crs']?>" id="namac" name="namac">
+            </div>
+            <br>
+            <div class="container">
+                <label for="linkc">Link Course</label>
+                <input required type="text" class="form-control" value="<?php echo $course['link']?>" id="linkc" name="linkc">
+            </div>
+            <br>
+            <div class="container">
+                <label for="hargas">Biaya Course</label>
+                <input required type="text" class="form-control" value="<?php echo $course['harga_crs']?>" id="hargas" name="hargas">
+            </div>
+            <br>
+            <div class="container">
+                <label for="durasic">Durasi Course</label>
+                <input required type="text" class="form-control" value="<?php echo $course['durasi_crs']?>" id="durasic" name="durasic">
+            </div>
+            <br>
+            <div class="container">
+                <label for="level">Level Course</label>
+                <input required type="text" class="form-control" value="<?php echo $course['level']?>" id="level" name="level">
+            </div>
+            <br>
+            <br>
+            <div class = "container ">
+            <button style="background-color:#37517e; border-color: #37517e;" type="submit" name="submit" class="btn btn-primary btn-md">Submit</button>
+            </div>
+        </form>
+        <br>
+        <br>
       </div>
     </section><!-- End About Us Section -->
 
@@ -174,20 +186,7 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#skills">Partisipan</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#faq">Pertanyaan</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Daftar</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Course</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tukar Pelajar</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Seminar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
             </ul>
           </div>
 

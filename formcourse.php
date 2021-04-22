@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Arsha Bootstrap Template - Index</title>
+  <title>Daftar Course</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/poltek.png" rel="icon">
+  <link href="assets/img/poltek.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -42,16 +42,16 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">POLINEMA</a></h1>
+      <h1 class="logo me-auto"><a href="index.php">POLINEMA</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="course.html">Kembali</a></li>
-          <li><a class="nav-link scrollto" href="tukper.html">Tukar Pelajar</a></li>
-          <li><a class="nav-link scrollto" href="seminar.html">Seminar</a></li>
-          <li><a class="getstarted scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="course.php">Kembali</a></li>
+          <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
+          <li><a class="nav-link scrollto" href="seminar.php">Seminar</a></li>
+          <li><a class="getstarted scrollto" href="index.php">Home</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -117,11 +117,6 @@
             </div>
             <br>
             <div class="container">
-                <label for="semester">Semester</label>
-                <input required type="text" class="form-control" id="semester" name="semester">
-            </div>
-            <br>
-            <div class="container">
                 <label for="email" class="form-label">Email address</label>
                 <input required type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" >
                 <div id="emailHelp" class="form-text">Kami akan menjaga kerahasiaan email anda</div>
@@ -153,7 +148,7 @@
             </div>
             <br>
             <br>
-            <div class = "container">
+            <div class = "container ">
             <button style="background-color:#37517e; border-color: #37517e;" type="submit" name="submit" class="btn btn-primary btn-md">Submit</button>
             </div>
         </form>
@@ -185,14 +180,13 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Daftar</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="formcourse.html">Course</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Tukar Pelajar</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Seminar</a></li>
             </ul>

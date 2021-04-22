@@ -9,15 +9,13 @@
         $prodi = $_POST['prodi'];
         $jurusan = $_POST['jurusan'];
         $ipk = $_POST['ipk'];
-        $semester = $_POST['semester'];
         $email = $_POST['email'];
         $namac = $_POST['namac'];
         $linkc = $_POST['linkc'];
         $hargas = $_POST['hargas'];
         $durasic = $_POST['durasic'];
         $level = $_POST['level'];
-        $isSuccess = $crud->insertAttendees($name, $nim, $prodi, $jurusan, $ipk, $semester, $email);
-        $isSuccessc = $crud->insertCourse($namac, $linkc, $hargas, $durasic, $level);
+        $isSuccessc = $crud->insertCourse($name, $nim, $prodi, $jurusan, $ipk, $email, $namac, $linkc, $hargas, $durasic, $level);
 
     }
 ?>
@@ -28,13 +26,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Arsha Bootstrap Template - Index</title>
+  <title>Berhasil Daftar</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/poltek.png" rel="icon">
+  <link href="assets/img/poltek.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -113,7 +111,8 @@
               <div class="member d-flex align-items-start aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
                 <div class="member-info">
                     <h4><?php echo $_POST['nama']?></h4>
-                    <span>NIM = <?php echo $_POST['nim']?></span>
+                    <span>IPK = <?php echo $_POST['ipk']?></span>
+                    <span><?php echo $_POST['email']?></span>
                     <p>Nama Course = <?php echo $_POST['namac']?></p>
                     <p>Link Course = <?php echo $_POST['linkc']?></p>
                     <p>Biaya Course = <?php echo $_POST['hargas']?></p>
