@@ -139,7 +139,6 @@
             <p>
               Pendaftaran akan ditutup ketika kuota pada seminar sudah terpenuhi, jadi siapa cepat dai yang dapat. Scroll kebawah untuk melihat daftar seminar
             </p>
-            <a href="formseminar.php" class="btn-learn-more">Daftar</a>
           </div>
         </div>
 
