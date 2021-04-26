@@ -1,3 +1,7 @@
+<?php
+    require_once 'db/conn.php';
+    $results = $crud->getSeminar();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +9,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Seminar Internasional</title>
+  <title>Daftar Course</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,7 +30,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/stylef.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Arsha - v4.1.0
@@ -48,11 +52,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.php">Kembali</a></li>
+          <li><a class="nav-link scrollto" href="seminar.php">Kembali</a></li>
           <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
           <li><a class="nav-link scrollto" href="course.php">Course</a></li>
-          <li><a class="nav-link scrollto" href="#">Admin</a></li>
-          <li><a class="getstarted scrollto" href="#">Daftar</a></li>
+          <li><a class="getstarted scrollto" href="index.php">Home</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -64,15 +67,10 @@
   <section id="hero" class="d-flex align-items-center">
 
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Seminar Internasional</h1>
-          <h2>Kegiatan ini bertujuan untuk emmbuka wawasan mahasiswa tentang kehidupan dan praktik kerja dari sisi pandang internasional</h2>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+      <div class="row d-flex justify-content-center">
+        <div style="text-align:center;" class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Selamat Datang Pendaftar!</h1>
+          <h2>Pastikan semua identitas dan keperluan untuk mendaftar seminar internasional sudah benar dan sesuai aturan</h2>
         </div>
       </div>
     </div>
@@ -81,118 +79,66 @@
 
   <main id="main">
 
-    <!-- ======= Cliens Section ======= -->
-    <section id="cliens" class="cliens section-bg">
-      <div class="container">
-
-        <div class="row" data-aos="zoom-in">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Cliens Section -->
-
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Tentang Seminar</h2>
+          <h2>Form Pendaftaran</h2>
         </div>
 
-        <div class="row content">
+        <div class="row content d-flex justify-content-center">
           <div class="col-lg-6">
-            <p>
-              Seminar ini diadakan oleh Polinema langusng dengan mengundang audien dan pembicara yang berasal dari instansi luar negeri. Keuntungan yang didapat :
+            <p style="text-align: center;">
+              Isi form berikut dengan baik dan benar :
             </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Memiliki pengalaman dan pandangan atas dunia internasional</li>
-              <li><i class="ri-check-double-line"></i> Mengetahui kebutuhan ilmu dan praktik dalam dunia internasional</li>
-              <li><i class="ri-check-double-line"></i> Mendapatkan sertifikat</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Pendaftaran akan ditutup ketika kuota pada seminar sudah terpenuhi, jadi siapa cepat dai yang dapat. Scroll kebawah untuk melihat daftar seminar
-            </p>
-            <a href="formseminar.php" class="btn-learn-more">Daftar</a>
-          </div>
         </div>
-
+        <form method="post" action ="successsem.php">
+            <br>
+            <div class="container">
+                <label for="nama">Nama</label>
+                <input required type="text" class="form-control" id="nama" name="nama">
+            </div>
+            <br>
+            <div class="container">
+                <label for="nim">NIM</label>
+                <input required type="number" require class="form-control" id="nim" name="nim">
+            </div>
+            <br>
+            <div class="container">
+                <label for="prodi">Program Studi</label>
+                <input required type="text" class="form-control" id="prodi" name="prodi">
+            </div>
+            <br>
+            <div class="container">
+                <label for="jurusan">Jurusan</label>
+                <input required type="text" class="form-control" id="jurusan" name="jurusan">
+            </div>
+            <br>
+            <div class="container">
+                <label for="email" class="form-label">Email address</label>
+                <input required type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" >
+                <div id="emailHelp" class="form-text">Kami akan menjaga kerahasiaan email anda</div>
+            </div>
+            <br>
+            <div class="container-md">
+            <label for="namas">Pilih Seminar :</label>
+            <select class="form-control" id="namas" name="namas">
+            <?php while($r = $results->fetch(PDO::FETCH_ASSOC)){?>
+                    <option value="<?php echo $r ['id_seminar'] ?>"><?php echo $r['judul'];?></option>
+            <?php }?>
+            </select>
+        </div>
+            <br>
+            <br>
+            <div class = "container ">
+            <button style="background-color:#37517e; border-color: #37517e;" type="submit" name="submit" class="btn btn-primary btn-md">Submit</button>
+            </div>
+        </form>
+        <br>
+        <br>
       </div>
     </section><!-- End About Us Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>List Seminar </h2>
-          <p>Seminar dibawah ini memiliki harga dan kuota yang berbeda sesuai banyaknya audien dan pembicara.</p>
-        </div>
-
-        <div class="row d-flex justify-content-center">
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Learn by Doing</a></h4>
-              <p>Seminar yang menjelaskan bahwa memulai lebih baik dari pada berhenti dengan pembicara Mr. X </p>
-              <br>
-              <p>200 Kursi</p>
-              <p>Rp. 110.000 / kursi</p>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Hard Skill or Soft Skill?</a></h4>
-              <p>Seminar yang menjelaskan perbedaan soft skill dan hard skill</p>
-              <br>
-              <p>250 Kursi</p>
-              <p>Rp. 100.000 / kursi</p>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Project Management</a></h4>
-              <p>Seminar yang diadakan oleh Polinema dengan pembicara dan audien berlingkup internasional</p>
-              <br>
-              <p>150 Kursi</p>
-              <p>Rp. 125.000 / kursi</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
 
   </main><!-- End #main -->
 
@@ -217,18 +163,13 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#skills">Partisipan</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#faq">Pertanyaan</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Daftar</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Course</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Tukar Pelajar</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Seminar</a></li>
             </ul>
