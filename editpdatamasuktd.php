@@ -1,11 +1,29 @@
+<div>
+<?php 
+    require_once 'db/conn.php';
+    if(isset($_POST['submit'])){
+        $id = $_POST['id'];
+        $name = $_POST['nama'];
+        $nim = $_POST['nim'];
+        $nik = $_POST['nik'];
+        $ipk = $_POST['ipk'];
+        $semester = $_POST['semester'];
+        $prodi = $_POST['prodi'];
+        $jurusan = $_POST['jurusan'];
+        $email = $_POST['email'];
+        $namat = $_POST['namat'];
+        $result = $crud->editMahasiswa2($id, $name, $nim, $nik, $ipk, $semester, $prodi, $jurusan, $email, $namat);
+
+    }
+?>
+</div> 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Course Internasional</title>
+  <title>Edit Pendaftar</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,7 +44,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/stylefs.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Arsha - v4.1.0
@@ -37,7 +55,6 @@
 </head>
 
 <body>
-
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
@@ -48,11 +65,11 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.php">Kembali</a></li>
-          <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
+          <li><a class="nav-link scrollto" href="datamasuktd.php">Kembali</a></li>
           <li><a class="nav-link scrollto" href="seminar.php">Seminar</a></li>
-          <li><a class="getstarted scrollto" href="formcourse.php">Daftar</a></li>
-          <li><a class="nav-link scrollto" href="loginc.php">Login</a></li>
+          <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
+          <li><a class="nav-link scrollto" href="course.php">Course</a></li>
+          <li><a class="getstarted scrollto" href="index.php">Home</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -64,17 +81,10 @@
   <section id="hero" class="d-flex align-items-center">
 
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Course Internasional</h1>
-          <h2>Materi tambahan yang dapat diambil melalui platform pembelajaran internasional yang disediakan oleh lembaga/instansi pendidikan internasional</h2>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="https://www.edx.org/" class="btn-get-started scrollto">Edx</a> &nbsp; &nbsp; &nbsp;
-            <a href="https://www.coursera.org/" class="btn-get-started scrollto">Coursera</a>
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/course.png" class="img-fluid animated" alt="">
+      <div class="row d-flex justify-content-center">
+        <div style="text-align:center;" class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Sukses mengedit!</h1>
+          <h2>Semoga data yang sudah diedit tidak terjadi kesalahpahaman. Klik tab kembali untuk ke data pendaftar</h2>
         </div>
       </div>
     </div>
@@ -82,70 +92,8 @@
   </section><!-- End Hero -->
 
   <main id="main">
-
-    <!-- ======= Cliens Section ======= -->
-    <section id="cliens" class="cliens section-bg">
-      <div class="container">
-
-        <div class="row d-flex justify-content-center" data-aos="zoom-in">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/edx.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/coursera.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/udemy.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/udacity.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/learndash.png" class="img-fluid" alt="">
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Cliens Section -->
-
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Tentang Course</h2>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6">
-            <p>
-              Untuk mengikuti course internasional, mahasiswa diharuskan mengikuti langkah dan persyaratan dibawah ini :
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Memilih maksimal 1 course dari Edx atau Coursera, maupun platform lain</li>
-              <li><i class="ri-check-double-line"></i> Biaya course tidak melebihi 100$ atau Rp. 1.500.000, jika lebih maka biaya lebihan akan ditanggung mahasiswa</li>
-              <li><i class="ri-check-double-line"></i> Pastikan course yang dipilih sesuai mata kuliah yang diambil pada prodi terkait</li>
-              <li><i class="ri-check-double-line"></i> Mengisi form pendaftaran (klik tombol disamping)</li>
-              <li><i class="ri-check-double-line"></i> Informasi penerimaan pendaftaran akan dikirim melalui email</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Sistem penerimaan dari course ini bergantung besarnya biaya, kesulitam course, kesesuaian,
-              dan nilai kecakapan berbahasa inggris serta IPK dengan rasio 8:2. Klik tombol dibawah untuk mendaftar.
-            </p>
-            <a href="formcourse.php" class="btn-learn-more">Daftar</a>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Us Section -->
-
+      
+    <!-- ======= end Hasil =========-->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -165,24 +113,10 @@
               <strong>Email:</strong> @polinema.ac.id<br>
             </p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Useful Link</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#skills">Partisipan</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#faq">Pertanyaan</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Daftar</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Course</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tukar Pelajar</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Seminar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
             </ul>
           </div>
 

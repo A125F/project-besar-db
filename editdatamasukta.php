@@ -1,3 +1,9 @@
+<?php 
+    require_once 'db/conn.php';
+    $results = $crud->getTukper();    
+    $id = $_GET['id'];
+    $course = $crud->getMahasiswa2Details($id);
+?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +11,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Login Page</title>
+  <title>Edit Pendaftar</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -48,6 +54,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
+          <li><a class="nav-link scrollto" href="datamasukta.php">Kembali</a></li>
           <li><a class="nav-link scrollto" href="course.php">Course</a></li>
           <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
           <li><a class="nav-link scrollto" href="seminar.php">Seminar</a></li>
@@ -65,8 +72,8 @@
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div style="text-align:center;" class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Dosen atau Admin?</h1>
-          <h2>Username dosen dengan admin memiliki akses yang berbeda terhadap data yang akan ditampilkan</h2>
+          <h1>Edit data</h1>
+          <h2>Pastikan data yang akan diedit sudah bendar dan sesuai agar tidak terjadi kesalahpahaman</h2>
         </div>
       </div>
     </div>
@@ -80,52 +87,69 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>LOGIN</h2>
+          <h2>Form Edit Data</h2>
         </div>
 
         <div class="row content d-flex justify-content-center">
           <div class="col-lg-6">
             <p style="text-align: center;">
-              Mohon isi username dan password dengan benar :
+              Edit Isi form berikut dengan baik dan benar :
             </p>
-            <br>
         </div>
-        <?php
-            require_once 'db/conn.php';
-
-            if($_SERVER['REQUEST_METHOD'] == 'POST'){
-                $usernamel = $_POST['usernamel'];
-                $passwordl = $_POST['passwordl'];
-
-                $result = $user->getAdmin($usernamel, $passwordl);
-                if(!$result){
-                    $result2 = $user->getDosen($usernamel, $passwordl);
-                    if($result2){
-                        $_SESSION['usernamel'] = $usernamel;
-                        $_SESSION['passowrdl'] = $result2['passwordl'];
-                        header("Location: datamasukcd.php");
-                    }else{
-                        echo '<div class = "alert alert-danger d-flex justify-content-center"> Username or Password is incorrect! Please try again! </div>';
-                    }
-                }else if($result){
-                    $_SESSION['usernamel'] = $usernamel;
-                    $_SESSION['passowrdl'] = $result['passwordl'];
-                    header("Location: datamasukca.php");
-                }else{
-                  echo '<div class = "alert alert-danger d-flex justify-content-center"> Username or Password is incorrect! Please try again! </div>';
-                }
-            }
-        ?>
-        <form action = "<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
+        <form method="post" action ="editpdatamasukta.php">
+        <input type="hidden" name="id" value="<?php echo $course['id_mhs']?>" />
             <br>
             <div class="container">
-                <label for="usernamel">Username</label>
-                <input required type="text" class="form-control" id="usernamel" name="usernamel">
+                <label for="nama">Nama</label>
+                <input required type="text" class="form-control" value="<?php echo $course['nama_mhs']?>" id="nama" name="nama">
             </div>
             <br>
             <div class="container">
-                <label for="passwordl">Password</label>
-                <input required type="password" require class="form-control" id="passwordl" name="passwordl">
+                <label for="nim">NIM</label>
+                <input required type="number" require class="form-control" value="<?php echo $course['nim']?>" id="nim" name="nim">
+            </div>
+            <br>
+            <div class="container">
+                <label for="nik">NIK</label>
+                <input required type="number" require class="form-control" value="<?php echo $course['nik']?>" id="nik" name="nik">
+            </div>
+            <br>
+            <div class="container">
+                <label for="ipk">IPK</label>
+                <input required type="text" require class="form-control" value="<?php echo $course['ipk']?>" id="ipk" name="ipk">
+            </div>
+            <br>
+            <div class="container">
+                <label for="semester">Semester</label>
+                <input required type="text" require class="form-control" value="<?php echo $course['semester']?>" id="semester" name="semester">
+            </div>
+            <br>
+            <div class="container">
+                <label for="prodi">Program Studi</label>
+                <input required type="text" class="form-control" value="<?php echo $course['prodi']?>" id="prodi" name="prodi">
+            </div>
+            <br>
+            <div class="container">
+                <label for="jurusan">Jurusan</label>
+                <input required type="text" class="form-control" value="<?php echo $course['jurusan']?>" id="jurusan" name="jurusan">
+            </div>
+            <br>
+            <div class="container">
+                <label for="email" class="form-label">Email address</label>
+                <input required type="email" class="form-control" value="<?php echo $course['email']?>" id="email" name="email" aria-describedby="emailHelp" >
+                <div id="emailHelp" class="form-text">Kami akan menjaga kerahasiaan email anda</div>
+            </div>
+            <br>
+            <div class="container-md">
+            <label for="namat">Pilih Seminar :</label>
+            <select class="form-control" id="namat" name="namat">
+            <?php while($r = $results->fetch(PDO::FETCH_ASSOC)){?>
+                <option value="<?php echo $r['id_tukper'] ?>" <?php if($r['id_tukper'] == 
+                    $course['id_tukper']) echo 'selected'?>>
+                    <?php echo $r['program']; ?>
+                </option>
+            <?php }?>
+            </select>
             </div>
             <br>
             <br>
@@ -162,14 +186,6 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Daftar</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tukar Pelajar</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Seminar</a></li>
             </ul>
           </div>
 

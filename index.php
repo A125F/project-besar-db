@@ -53,15 +53,14 @@
           <li><a class="nav-link   scrollto" href="#services">Layanan</a></li>
           <li class="dropdown"><a href="#"><span>Daftar</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Course</a></li>
-              <li><a href="#">Tukar Pelajar</a></li>
-              <li><a href="#">Seminar</a></li>
+              <li><a href="formcourse.php">Course</a></li>
+              <li><a href="formtukper.php">Tukar Pelajar</a></li>
+              <li><a href="formseminar.php">Seminar</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#faq">Pertanyaan</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="https://www.polinema.ac.id/">Home</a></li>
-          <li><a class="nav-link scrollto" href="login.php">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -96,30 +95,30 @@
     <section id="cliens" class="cliens section-bg">
       <div class="container">
 
-        <div class="row" data-aos="zoom-in">
+        <div class="row d-flex justify-content-center" data-aos="zoom-in">
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+            <img src="assets/img/edx.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+            <img src="assets/img/inixindo.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+            <img src="assets/img/uthm.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+            <img src="assets/img/harvard.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+            <img src="assets/img/coursera.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+            <img src="assets/img/hkust.png" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -170,7 +169,7 @@
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
             <h3>Jumlah mahasiswa yang mengikuti kegiatan internasional tahun ini</h3>
             <p class="fst-italic">
-              Data tersebut diambil dari presentase perbandingan mahasiswa yang diterima dengan mahasiswa yang mendaftar.
+              Data tersebut diambil dari presentase kuota yang diberikan per tahun dengan pendaftar.
             </p>
 
             <div class="skills-content">

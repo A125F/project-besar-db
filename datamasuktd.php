@@ -1,3 +1,7 @@
+<?php 
+    require_once 'db/conn.php';
+    $results = $crud->getMahasiswa2();
+?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +9,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Course Internasional</title>
+  <title>Data Pendaftar</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,7 +30,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/stylef.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Arsha - v4.1.0
@@ -48,11 +52,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.php">Kembali</a></li>
-          <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
+          <li><a class="nav-link scrollto" href="tukper.php">Kembali</a></li>
           <li><a class="nav-link scrollto" href="seminar.php">Seminar</a></li>
-          <li><a class="getstarted scrollto" href="formcourse.php">Daftar</a></li>
-          <li><a class="nav-link scrollto" href="loginc.php">Login</a></li>
+          <li><a class="nav-link scrollto" href="course.php">Course</a></li>
+          <li><a class="getstarted scrollto" href="index.php">Home</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -62,19 +65,12 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
-
+  
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Course Internasional</h1>
-          <h2>Materi tambahan yang dapat diambil melalui platform pembelajaran internasional yang disediakan oleh lembaga/instansi pendidikan internasional</h2>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="https://www.edx.org/" class="btn-get-started scrollto">Edx</a> &nbsp; &nbsp; &nbsp;
-            <a href="https://www.coursera.org/" class="btn-get-started scrollto">Coursera</a>
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/course.png" class="img-fluid animated" alt="">
+      <div class="row d-flex justify-content-center">
+        <div style="text-align:center;" class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Selamat datang Dosen!</h1>
+          <h2>Akses dosen memperbolehkan anda untuk melihat dan mengedit data</h2>
         </div>
       </div>
     </div>
@@ -83,66 +79,51 @@
 
   <main id="main">
 
-    <!-- ======= Cliens Section ======= -->
-    <section id="cliens" class="cliens section-bg">
-      <div class="container">
-
-        <div class="row d-flex justify-content-center" data-aos="zoom-in">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/edx.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/coursera.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/udemy.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/udacity.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/learndash.png" class="img-fluid" alt="">
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Cliens Section -->
-
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Tentang Course</h2>
+          <h2>Tabel Pendaftar</h2>
         </div>
 
-        <div class="row content">
+        <div class="row content d-flex justify-content-center">
           <div class="col-lg-6">
-            <p>
-              Untuk mengikuti course internasional, mahasiswa diharuskan mengikuti langkah dan persyaratan dibawah ini :
+            <p style="text-align: center;">
+              Berikut adalah data pendaftar :
             </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Memilih maksimal 1 course dari Edx atau Coursera, maupun platform lain</li>
-              <li><i class="ri-check-double-line"></i> Biaya course tidak melebihi 100$ atau Rp. 1.500.000, jika lebih maka biaya lebihan akan ditanggung mahasiswa</li>
-              <li><i class="ri-check-double-line"></i> Pastikan course yang dipilih sesuai mata kuliah yang diambil pada prodi terkait</li>
-              <li><i class="ri-check-double-line"></i> Mengisi form pendaftaran (klik tombol disamping)</li>
-              <li><i class="ri-check-double-line"></i> Informasi penerimaan pendaftaran akan dikirim melalui email</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Sistem penerimaan dari course ini bergantung besarnya biaya, kesulitam course, kesesuaian,
-              dan nilai kecakapan berbahasa inggris serta IPK dengan rasio 8:2. Klik tombol dibawah untuk mendaftar.
-            </p>
-            <a href="formcourse.php" class="btn-learn-more">Daftar</a>
-          </div>
         </div>
-
+        <table class="table container-md">
+        <tr>
+            <th>#</th>
+            <th>Nama Mahasiswa</th>
+            <th>NIM</th>
+            <th>IPK</th>
+            <th>Semester</th>
+            <th>Email</th>
+            <th>Program</th>
+            <th>Course</th>
+            <th>Actions</th>
+        </tr>
+        <?php while($r = $results->fetch(PDO::FETCH_ASSOC)){ ?>
+              <tr>
+                  <td><?php echo $r['id_mhs'] ?></td>
+                  <td><?php echo $r['nama_mhs'] ?></td>
+                  <td><?php echo $r['nim'] ?></td>
+                  <td><?php echo $r['ipk'] ?></td>
+                  <td><?php echo $r['semester'] ?></td>
+                  <td><?php echo $r['email'] ?></td>
+                  <td><?php echo $r['program'] ?></td>
+                  <td><?php echo $r['course_tp'] ?></td>
+                  <td>
+                      <a href="viewdatamasuktd.php?id=<?php echo $r['id_mhs'] ?>" class="btn btn-primary" style="background-color:white; border-color: #37517e; color:#37517e;">View</a> &nbsp;
+                      <a href="editdatamasuktd.php?id=<?php echo $r['id_mhs'] ?>" class="btn btn-warning" style="background-color:#37517e; border-color: #37517e; color:white;">Edit</a> &nbsp;
+                  </td>
+              </tr>
+        <?php }?>
+    </table>
+        <br>
+        <br>
       </div>
     </section><!-- End About Us Section -->
 
@@ -169,20 +150,7 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#skills">Partisipan</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#faq">Pertanyaan</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Daftar</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Course</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tukar Pelajar</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Seminar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
             </ul>
           </div>
 

@@ -53,6 +53,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="datamasukcd.php">Kembali</a></li>
+          <li><a class="nav-link scrollto" href="course.php">Course</a></li>
           <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
           <li><a class="nav-link scrollto" href="seminar.php">Seminar</a></li>
           <li><a class="getstarted scrollto" href="index.php">Home</a></li>
@@ -104,8 +105,8 @@
                             <p>Durasi Course = <?php echo $result['durasi_crs']?></p>
                             <p>Level Course = <?php echo $result['level']?></p>
                             <br>
-                            <a href="datamasukcd.php" class="btn btn-info">Back to list</a>
-                            <a href="editdatamasukcd.php?id=<?php echo $result['id_courseint'] ?>" class="btn btn-warning">Edit</a>
+                            <a href="datamasukcd.php" class="btn btn-info" style="background-color:white; border-color: #37517e; color:#37517e;">Back to list</a>
+                            <a href="editdatamasukcd.php?id=<?php echo $result['id_courseint'] ?>" class="btn btn-warning" style="background-color:#37517e; border-color: #37517e; color:white;">Edit</a>
                                         
                         </div>
                     </div>

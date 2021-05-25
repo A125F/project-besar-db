@@ -51,8 +51,8 @@
           <li><a class="nav-link scrollto" href="index.php">Kembali</a></li>
           <li><a class="nav-link scrollto" href="seminar.php">Seminar</a></li>
           <li><a class="nav-link scrollto" href="course.php">Course</a></li>
-          <li><a class="nav-link scrollto" href="#">Admin</a></li>
-          <li><a class="getstarted scrollto" href="#">Daftar</a></li>
+          <li><a class="getstarted scrollto" href="formtukper.php">Daftar</a></li>
+          <li><a class="nav-link scrollto" href="logint.php">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -72,7 +72,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+          <img src="assets/img/why-us.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -85,30 +85,22 @@
     <section id="cliens" class="cliens section-bg">
       <div class="container">
 
-        <div class="row" data-aos="zoom-in">
+        <div class="row d-flex justify-content-center" data-aos="zoom-in">
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+            <img src="assets/img/hkust.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+            <img src="assets/img/uthm.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+            <img src="assets/img/mit.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+            <img src="assets/img/harvard.png" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -140,6 +132,7 @@
             <p>
               Informasi pertukaran pelajar lebih lanjut dapat menghubungi pihak yang bersangkutan. Tiap pertukaran pelajar memiliki metode pembelajaran yang berbeda dan waktu tempuh yang berbeda.
             </p>
+            <a href="formtukper.php" class="btn-learn-more">Daftar</a>
           </div>
         </div>
 
@@ -152,7 +145,7 @@
 
         <div class="section-title">
           <h2>List Pertukaran Pelajar </h2>
-          <p>Mahasiswa yang mendaftar akan diseleksi berdasarkan kecakapan berbahasa inggris dan IPK dengan rasio 8:2</p>
+          <p>Mahasiswa yang mendaftar akan diseleksi berdasarkan kecakapan berbahasa inggris dan IPK dengan rasio 8:2. Harga dibawah belum termasuk biaya hidup.</p>
         </div>
 
         <div class="row d-flex justify-content-center">
@@ -162,7 +155,7 @@
               <h4><a href="">UTHM</a></h4>
               <p>Pertukaran pelajar antar Politeknik Negeri Malang dengan Universiti Tun Hussein Onn Malaysia</p>
               <br>
-              <p>Gratis biaya pendidikan, tidak biaya hidup</p>
+              <p>Rp. 10.000.000</p>
             </div>
           </div>
 
@@ -172,7 +165,7 @@
               <h4><a href="">HkUST</a></h4>
               <p>Pertukaran pelajar antar Politeknik Negeri Malang dengan Hongkong University of Science and Technology</p>
               <br>
-              <p>Rp. 12.500.000 (hanya biaya pendidikan)</p>
+              <p>Rp. 12.500.000</p>
             </div>
           </div>
 
@@ -182,7 +175,7 @@
               <h4><a href="">MIT</a></h4>
               <p>Pertukaran pelajar antar Politeknik Negeri Malang dengan Massachusetts Institute of Technology</p>
               <br>
-              <p>Full cover (biaya pendidikan dan hidup)</p>
+              <p>Rp. 15.000.000</p>
             </div>
           </div>
 

@@ -68,6 +68,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="datamasukca.php">Kembali</a></li>
+          <li><a class="nav-link scrollto" href="course.php">Course</a></li>
           <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
           <li><a class="nav-link scrollto" href="seminar.php">Seminar</a></li>
           <li><a class="getstarted scrollto" href="index.php">Home</a></li>
@@ -115,11 +116,9 @@
             </p>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Daftar</h4>
+            <h4>Useful Link</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="formcourse.php">Course</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tukar Pelajar</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Seminar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
             </ul>
           </div>
 

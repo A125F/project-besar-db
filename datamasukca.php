@@ -1,7 +1,6 @@
 <?php 
     require_once 'db/conn.php';
     $results = $crud->getCourse();
-    $results1 = $crud->getAdmin();
 ?> 
 <!DOCTYPE html>
 <html lang="en">

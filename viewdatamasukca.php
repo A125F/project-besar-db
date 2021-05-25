@@ -53,6 +53,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="datamasukca.php">Kembali</a></li>
+          <li><a class="nav-link scrollto" href="course.php">Course</a></li>
           <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
           <li><a class="nav-link scrollto" href="seminar.php">Seminar</a></li>
           <li><a class="getstarted scrollto" href="index.php">Home</a></li>
