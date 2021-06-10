@@ -92,6 +92,7 @@
             <p style="text-align: center;">
               Berikut adalah data pendaftar :
             </p>
+            <br>
         </div>
         <table class="table table-bordered">
         <tr>
