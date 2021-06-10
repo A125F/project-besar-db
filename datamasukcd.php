@@ -94,9 +94,9 @@
               Berikut adalah data pendaftar :
             </p>
         </div>
-        <table class="table container-md">
+        <table class="table table-bordered">
         <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>Nama Mahasiswa</th>
             <th>IPK</th>
             <th>Nama Course</th>
