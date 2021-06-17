@@ -96,6 +96,16 @@
                return false;
            }
        }
+       public function getLog(){
+        try{
+        $sql = "SELECT * FROM logcourse";
+        $result = $this->db->query($sql);
+        return $result;
+        }catch(PDOException $e){
+           echo $e->getMessage();
+           return false;
+       }
+   }
         public function getAdmin(){
             try{
             $sql = "SELECT * FROM admin";

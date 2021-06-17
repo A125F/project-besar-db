@@ -1,6 +1,6 @@
 <?php 
     require_once 'db/conn.php';
-    $results = $crud->getCourse();
+    $results = $crud->getLog();
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Data Pendaftar</title>
+  <title>Log Perubahan</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -52,11 +52,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="course.php">Kembali</a></li>
+          <li><a class="nav-link scrollto" href="datamasukca.php">Kembali</a></li>
           <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
           <li><a class="nav-link scrollto" href="seminar.php">Seminar</a></li>
           <li><a class="getstarted scrollto" href="index.php">Home</a></li>
-          <li><a class="nav-link scrollto" href="datamasuklog.php">Log</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -71,7 +70,7 @@
       <div class="row d-flex justify-content-center">
         <div style="text-align:center;" class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
           <h1>Selamat datang Admin!</h1>
-          <h2>Akses admin memperbolehkan anda untuk melihat, mengedit, dan menghapus data.</h2>
+          <h2>Pada laman ini, admin dapat melihat perubahan data course yang dilakukan pada pendaftar course internasional</h2>
         </div>
       </div>
     </div>
@@ -85,13 +84,13 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Tabel Pendaftar</h2>
+          <h2>Tabel Log Perubahan</h2>
         </div>
 
         <div class="row content d-flex justify-content-center">
           <div class="col-lg-6">
             <p style="text-align: center;">
-              Berikut adalah data pendaftar :
+              Berikut adalah data pendaftar yang dirubah :
             </p>
             <br>
         </div>
@@ -99,23 +98,25 @@
         <tr>
             <th>ID</th>
             <th>Nama Mahasiswa</th>
-            <th>IPK</th>
-            <th>Nama Course</th>
-            <th>Harga Course</th>
-            <th>Actions</th>
+            <th>Course Lama</th>
+            <th>Course Baru</th>
+            <th>Harga Lama</th>
+            <th>Harga Baru</th>
+            <th>Level Lama</th>
+            <th>Level Baru</th>
+            <th>Waktu Ganti</th>
         </tr>
         <?php while($r = $results->fetch(PDO::FETCH_ASSOC)){ ?>
               <tr>
                   <td><?php echo $r['id_courseint'] ?></td>
                   <td><?php echo $r['nama_mhs'] ?></td>
-                  <td><?php echo $r['ipkc'] ?></td>
-                  <td><?php echo $r['nama_crs'] ?></td>
-                  <td><?php echo $r['harga_crs'] ?></td>
-                  <td>
-                      <a href="viewdatamasukca.php?id=<?php echo $r['id_courseint'] ?>" class="btn btn-primary" style="background-color:white; border-color: #37517e; color:#37517e;">View</a> &nbsp;
-                      <a href="editdatamasukca.php?id=<?php echo $r['id_courseint'] ?>" class="btn btn-warning" style="background-color:#37517e; border-color: #37517e; color:white;">Edit</a> &nbsp;
-                      <a onclick="return confirm('Are you sure?');" href="deldatamasukca.php?id=<?php echo $r['id_courseint'] ?>" class="btn btn-danger">Delete</a>
-                  </td>
+                  <td><?php echo $r['course_old'] ?></td>
+                  <td><?php echo $r['course_new'] ?></td>
+                  <td><?php echo $r['harga_old'] ?></td>
+                  <td><?php echo $r['harga_new'] ?></td>
+                  <td><?php echo $r['level_old'] ?></td>
+                  <td><?php echo $r['level_new'] ?></td>
+                  <td><?php echo $r['timest'] ?></td>
               </tr>
         <?php }?>
     </table>
