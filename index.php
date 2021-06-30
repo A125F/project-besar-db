@@ -61,6 +61,7 @@
           <li><a class="nav-link scrollto" href="#faq">Pertanyaan</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="https://www.polinema.ac.id/">Home</a></li>
+          <li><a class="nav-link scrollto" href="login.php">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

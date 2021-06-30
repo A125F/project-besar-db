@@ -80,7 +80,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Login Seminar</h2>
+          <h2>Login</h2>
         </div>
 
         <div class="row content d-flex justify-content-center">
@@ -103,14 +103,14 @@
                     if($result2){
                         $_SESSION['usernamel'] = $usernamel;
                         $_SESSION['passowrdl'] = $result2['passwordl'];
-                        header("Location: datamasuksd.php");
+                        header("Location: datamasukcd.php");
                     }else{
                         echo '<div class = "alert alert-danger d-flex justify-content-center"> Username or Password is incorrect! Please try again! </div>';
                     }
                 }else if($result){
                     $_SESSION['usernamel'] = $usernamel;
                     $_SESSION['passowrdl'] = $result['passwordl'];
-                    header("Location: datamasuksa.php");
+                    header("Location: datamasukca.php");
                 }else{
                   echo '<div class = "alert alert-danger d-flex justify-content-center"> Username or Password is incorrect! Please try again! </div>';
                 }

@@ -52,9 +52,8 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="seminar.php">Kembali</a></li>
-          <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
-          <li><a class="nav-link scrollto" href="course.php">Course</a></li>
+        <li><a class="nav-link scrollto" href="datamasukta.php">Tukar Pelajar</a></li>
+          <li><a class="nav-link scrollto" href="datamasukca.php">Course</a></li>
           <li><a class="getstarted scrollto" href="index.php">Home</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -84,7 +83,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Tabel Pendaftar</h2>
+          <h2>Tabel Pendaftar Seminar</h2>
         </div>
 
         <div class="row content d-flex justify-content-center">

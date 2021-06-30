@@ -1,15 +1,15 @@
 <?php
-    // $host = 'localhost';
-    // $db = 'internasional';
-    // $user = 'root';
-    // $pass = '';
-    // $charset = 'utf8mb4';
-
-    $host = 'remotemysql.com';
-    $db = 'bXnfUshWrT';
-    $user = 'bXnfUshWrT';
-    $pass = 'BDHcRmfItv';
+    $host = 'localhost';
+    $db = 'internasional';
+    $user = 'root';
+    $pass = '';
     $charset = 'utf8mb4';
+
+    // $host = 'remotemysql.com';
+    // $db = 'bXnfUshWrT';
+    // $user = 'bXnfUshWrT';
+    // $pass = 'BDHcRmfItv';
+    // $charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host; dbname=$db; charset=$charset";
 
