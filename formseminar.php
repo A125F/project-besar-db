@@ -69,7 +69,7 @@
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div style="text-align:center;" class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Selamat Datang Pendaftar!</h1>
+          <h1>Selamat Datang Pendaftar Seminar!</h1>
           <h2>Pastikan semua identitas dan keperluan untuk mendaftar seminar internasional sudah benar dan sesuai aturan</h2>
         </div>
       </div>
