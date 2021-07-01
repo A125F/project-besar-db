@@ -52,7 +52,6 @@
           <li><a class="nav-link scrollto" href="tukper.php">Tukar Pelajar</a></li>
           <li><a class="nav-link scrollto" href="seminar.php">Seminar</a></li>
           <li><a class="getstarted scrollto" href="formcourse.php">Daftar</a></li>
-          <li><a class="nav-link scrollto" href="loginc.php">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

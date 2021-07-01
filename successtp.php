@@ -86,7 +86,7 @@
       <div class="row d-flex justify-content-center">
         <div style="text-align:center;" class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
           <h1>Sukses mendaftar!</h1>
-          <h2>Selalu ingat jadwal seminar yang akan dilaksanakan sesuai dengan pilihan kamu</h2>
+          <h2>Selalu ingat jadwal tukar pelajar yang akan dilaksanakan sesuai dengan pilihan kamu</h2>
         </div>
       </div>
     </div>
